@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		
+	  body,html{
+	  	  height: 100%;
+	  }
+		
+		
+		body {
+			/*perspective 属性指定了观察者与z=0平面的距离，使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。默认情况下，消失点位于元素的中心，但是可以通过设置perspective-origin属性来改变其位置。*/
+			-webkit-perspective:1000px;
+			-moz-perspective: 1000px;
+			-ms-perspective: 1000px;
+			perspective: 10px;
+			background-color: #212121;
+			font-family: '微软雅黑';
+		}
+		.book{
+		     position: absolute;
+		     left:50%;
+		     top:50%;
+		     width: 300px;
+		     height:300px;
+		     border: 1px solid blue ;
+             margin-left: -150px;
+             margin-top: -150px;
+      	     -webkit-transform-style: preserve-3d;
+	        -moz-transform-style: preserve-3d;
+	        -ms-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	         -webkit-transform: rotateX(30deg);
+	        -ms-transform: rotateX(30deg);
+	        -o-transform: rotateX(30deg);
+	        transform: rotateX(30deg);
+	     				
+			}
+		   .page_0{
+		   	 position: absolute;
+		   	 left:0;
+		   	 top:0;
+		   	 width:300px;
+		   	 height:300px;
+		     background-color:aqua;
+		     font-family: "微软雅黑";
+		   	 font-size: 30px;
+	         animation: page0 7s;
+	         -moz-animation: page0 7s; /* Firefox */
+	         -webkit-animation: page0 7s; /* Safari and Chrome */
+	         -o-animation: page0 7s ; /* Opera */
+		
+		   }
+		   .page_1{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 300px;
+			height: 300px;
+			background-color:whitesmoke;
+			animation: page0 5s 1s;
+	        -moz-animation: page0 5s 1s; /* Firefox */
+	        -webkit-animation: page0 5s 1s; /* Safari and Chrome */
+	        -o-animation: page0 5s 1s; /* Opera */
+	       
+	       
+		}
+		.page_2{
+			position:absolute;
+			background-color:whitesmoke;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			right: 0;
+		}
+		
+		.transform_orign{
+			-webkit-transform-origin: 0% 50%;
+			-moz-transform-origin: 0 50%;
+			-ms-transform-origin: 0 50%;
+			-o-transform-origin: 0 50%;
+			transform-origin: 0% 50%;
+		}
+		   
+		   @keyframes page0
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    }
+	    /* Firefox */
+	    @-moz-keyframes page0{
+
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    }
+	    /* Safari and Chrome */
+	    @-webkit-keyframes page0
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    }
+	    /* Opera */
+	    @-o-keyframes page0
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);
+	           }
+	      }
+	 
+	 
+	 
+	 
+	  @keyframes page1
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    }
+	    /* Firefox */
+	    @-moz-keyframes page1
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    }
+	    /* Safari and Chrome */
+	    @-webkit-keyframes page1
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-160deg);
+	            -ms-transform: rotateY(-160deg);
+	            -o-transform: rotateY(-160deg);
+	            transform: rotateY(-160deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    }
+	    
+	    /* Opera */
+	    @-o-keyframes page1
+	    {
+	    0%   {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);}
+	    50% {-webkit-transform: rotateY(-150deg);
+	            -ms-transform: rotateY(-150deg);
+	            -o-transform: rotateY(-150deg);
+	            transform: rotateY(-150deg);}
+	    100% {-webkit-transform: rotateY(0deg);
+	            -ms-transform: rotateY(0deg);
+	            -o-transform: rotateY(0deg);
+	            transform: rotateY(0deg);
+	           }
+	      
+	    }
+		   .page_0 .page_front{
+		   	     position: absolute;
+		   	   left: 40%;
+		   	   top: 40%;
+		   	     
+		   	    
+		   }
+		   
+		
+		
+		</style>
+	</head>
+	<body>
+		<div class="book">
+			<div class="page_2 ">
+				03
+			</div>
+			<div class="page_1 transform_orign">
+				<p>01</p>
+			</div>
+			 <div class="page_0 transform_orign">
+			<p class="page_front"/>封面</p>
+			</div>
+		
+		</div>
+		
+	</body>
+</html>
